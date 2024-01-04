@@ -1,0 +1,56 @@
+{
+    "compilerOptions": {
+      /* 基本选项 */
+      "target": "es2020",                                // 指定 ECMAScript 目标版本
+      "module": "commonjs",                              // 指定生成哪个模块系统代码
+      "lib": ["es2020"],                                 // 指定要包含在编译中的库文件
+      "allowJs": true,                                   // 允许编译 javascript 文件
+      "outDir": "./dist",                                // 指定输出目录
+      "rootDir": "./src",                                // 指定输入文件的根目录
+      "strict": true,                                    // 启用所有严格类型检查选项
+      "esModuleInterop": true,                           // 允许导出为模块
+      "skipLibCheck": true,                              // 跳过声明文件的类型检查
+      "forceConsistentCasingInFileNames": true,          // 禁用文件大小写不一致的情况
+  
+      /* 严格的类型检查选项 */
+      "strictNullChecks": true,                          // 严格的 null 检查
+      "strictFunctionTypes": true,                       // 严格的函数类型检查
+      "strictBindCallApply": true,                       // 严格的 bind/call/apply 检查
+      "strictPropertyInitialization": true,              // 严格的属性初始化检查
+      "noImplicitAny": true,                             // 不允许隐式的 any 类型
+      "noImplicitThis": true,                            // 不允许隐式的 this 类型
+      "alwaysStrict": true,                              // 以严格模式解析并为每个源文件写入 "use strict"
+  
+      /* 额外的检查 */
+      "noUnusedLocals": true,                            // 报告错误在代码中未使用的局部变量
+      "noUnusedParameters": true,                        // 报告错误在函数中未使用的参数
+      "noImplicitReturns": true,                         // 不允许函数没有返回值
+      "noFallthroughCasesInSwitch": true,                // 报告 switch 语句的 case 必须使用 break 来中断
+  
+      /* 模块解析选项 */
+      "moduleResolution": "node",                        // 模块解析策略
+      "baseUrl": "./",                                   // 基目录以解析非相对模块名
+      "paths": {                                         // 路径映射
+        "*": ["node_modules/*", "src/types/*"]
+      },
+      "resolveJsonModule": true,                         // 允许导入 JSON 模块
+  
+      /* Source Map Options */
+      "sourceMap": true,                                 // 生成相应的 '.map' 文件
+  
+      /* Experimental Options */
+      "experimentalDecorators": true,                    // 启用实验性的装饰器
+      "emitDecoratorMetadata": true                      // 为装饰器提供元数据支持
+    },
+    "include": ["src/**/*"],                             // 指定要包含在编译中的文件
+    "exclude": ["node_modules", "**/*.spec.ts"],         // 指定要排除的文件
+    "ts-node": {
+        "compilerOptions": {
+          "module": "CommonJS",
+          "strict": false,
+          "allowJs": true,
+          "checkJs": true,
+          "sourceMap": false
+        }
+  }
+}
